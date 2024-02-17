@@ -4,17 +4,24 @@
 
 using namespace std;
 
-bool is_palindrome(int num) {
-    // Write Function Only
+bool is_palindrome(int num) 
+{
+    int originalNum = num;
+    int reversedNum = 0;
+
+    while (num > 0) 
+    {
+        int digit = num % 10;
+        reversedNum = reversedNum * 10 + digit;
+        num /= 10;
+    }
+    return originalNum == reversedNum;
 }
 
 
 
-
-
-
-// ----------------------------------------Don't Touch--------------------------------------------------------------------
-void run_test_cases() {
+void run_test_cases()
+{
     // Test case 1: Palindrome number
     assert(is_palindrome(121) == true);
 
@@ -32,7 +39,8 @@ void run_test_cases() {
     cout << "All test cases passed!" << endl;
 }
 
-int main() {
+int main()
+{
     // Run the test cases
     run_test_cases();
 
@@ -41,9 +49,11 @@ int main() {
     cout << "Enter a number to check for Palindrome: ";
     cin >> numToCheck;
 
-    if (is_palindrome(numToCheck)) {
+    if (is_palindrome(numToCheck)) 
+    {
         cout << numToCheck << " is a Palindrome number." << endl;
-    } else {
+    } else 
+    {
         cout << numToCheck << " is not a Palindrome number." << endl;
     }
 

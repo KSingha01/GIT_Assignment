@@ -1,14 +1,8 @@
 def find_missing_number(arr):
-    pass
-    # Write Function Only
-
-
-
-
-
-
-
-# --------------------------------------Don't Touch------------------------------------------------------------------
+    n = len(arr) + 1
+    total = n * (n + 1) // 2
+    arr_sum = sum(arr)
+    return total - arr_sum
 
 def run_test_cases():
     # Test case 1: Missing number is 4

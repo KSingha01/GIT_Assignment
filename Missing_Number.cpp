@@ -4,18 +4,21 @@
 
 using namespace std;
 
-int find_missing_number(int arr[], int size) {
-        //   Write Function Only
-
-
-
-
-
+int find_missing_number(int arr[], int size) 
+{
+    int n = size + 1;
+    int total = (n * (n + 1)) / 2;
+    int sum = 0;
+    for (int i = 0; i < size; i++) 
+    {
+        sum += arr[i];
+    }
+    return total - sum;
 }
 
-// ----------------------------------------Don't Touch--------------------------------------------------------------------
 
-void run_test_cases() {
+void run_test_cases()
+{
     // Test case 1: Missing number is 4
     int arr1[] = {1, 2, 3, 5};
     assert(find_missing_number(arr1, sizeof(arr1) / sizeof(arr1[0])) == 4);
@@ -29,7 +32,8 @@ void run_test_cases() {
     cout << "All test cases passed!" << endl;
 }
 
-int main() {
+int main()
+{
     // Run the test cases
     run_test_cases();
     return 0;

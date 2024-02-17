@@ -1,17 +1,12 @@
 def count_zeros_ones(arr):
-    pass
-    # Write Function Only
-
-
-
-
-
-
-
-
-
-# --------------------------------------Don't Touch------------------------------------------------------------------
-
+    count_zeros = 0
+    count_ones = 0
+    for num in arr:
+        if num == 0:
+            count_zeros += 1
+        elif num == 1:
+            count_ones += 1
+    return count_zeros, count_ones
 
 def run_test_cases():
     # Test case 1: 3 zeros, 2 ones

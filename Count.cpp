@@ -3,22 +3,27 @@
 
 using namespace std;
 
-void count_zeros_ones(int arr[], int size, int& count_zeros, int& count_ones) {
-    // Write Function Only
-
-
+void count_zeros_ones(int arr[], int size, int& count_zeros, int& count_ones)
+{
+    count_zeros = 0;
+    count_ones = 0;
     
+    for (int i = 0; i < size; i++) 
+    {
+        if (arr[i] == 0) 
+        {
+            count_zeros++;
+        }
+        else if (arr[i] == 1) 
+        {
+            count_ones++;
+        }
+    }  
 
 }
 
-
-
-
-
-
-// ----------------------------------------Don't Touch--------------------------------------------------------------------
-
-void run_test_cases() {
+void run_test_cases() 
+{
     // Test case 1: 3 zeros, 2 ones
     int arr1[] = {0, 1, 0, 0, 1};
     int count_zeros1, count_ones1;
@@ -36,7 +41,8 @@ void run_test_cases() {
     cout << "All test cases passed!" << endl;
 }
 
-int main() {
+int main() 
+{
     // Run the test cases
     run_test_cases();
     return 0;

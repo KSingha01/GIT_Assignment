@@ -1,15 +1,15 @@
 # palindrome_check.py
 
 def is_palindrome(num):
-    pass
-     # Write Function Only
+    original_num = num
+    reversed_num = 0
 
+    while num > 0:
+        digit = num % 10
+        reversed_num = reversed_num * 10 + digit
+        num //= 10
 
-
-
-
-
-# --------------------------------------Don't Touch------------------------------------------------------------------
+    return original_num == reversed_num
 
 def run_test_cases():
     # Test case 1: Palindrome number
